@@ -17,25 +17,20 @@ export default function Home() {
   const [openmodal, setopenmodal] = useState(false)
   const Footer = () => {
     return (
-      <footer className="bg-dark text-light">
+      <footer className="bg-secondary text-light">
         <Container>
           <div className="row align-items-center">
-            <div className="col-md-4">
-              <img src="logo.png" alt="Logo" className="img-fluid" />
+            <div className="col-md-4 m-4">
+              <img src="logo.png" alt="Logo" width={'230px'} height={'230px'}className="img-fluid" />
             </div>
-            <div className="col-md-8">
-              <div className="row">
-                <div className="col-sm-6">
-                  <h5>Contactanos</h5>
-                  <p>Blvd. Bernardo Quintana 9691, Sur<br />Santiago de Querétaro, Qro.<br />Telefono: 442 749 2083</p>
-                </div>
-              </div>
-            </div>
+            
+            
           </div>
         </Container>
       </footer>
     );
   };
+  
   
  
   
