@@ -269,9 +269,11 @@ export default function Home() {
               Estrategias Económicas para <br /> Impulsar tu Empresa
             </h1>
             <div className='text-right mt-4'>
-              <Button size="lg" variant="success" onClick={() => setopenmodal(true)}>
+              <Link href='https://api.whatsapp.com/send?phone=4427492083'>
+              <Button size="lg" variant="success" >
                 ENVIAR WHATSAPP
               </Button>
+              </Link>
             </div>
           </div>
         </Col>
