@@ -10,7 +10,7 @@ import { animateScroll as scroll } from 'react-scroll';
 import { Omit, BsPrefixProps } from 'react-bootstrap/esm/helpers';
 import axios from 'axios'
 import Planes from '@/components/Planes'
-import FAQComponent from '@/components/FAQComponent';
+
 
 export default function Home() {
   const [ref, inView] = useInView();
