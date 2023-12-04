@@ -141,7 +141,7 @@ export default function Home() {
     <>
       <Head>
         <title>Unique Living</title>
-        <meta name="description" content="Unique Living Queretaro" />
+        <meta name="description" content="Ikapitol Queretaro" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
