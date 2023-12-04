@@ -10,6 +10,7 @@ import { animateScroll as scroll } from 'react-scroll';
 import { Omit, BsPrefixProps } from 'react-bootstrap/esm/helpers';
 import axios from 'axios'
 import Planes from '@/components/Planes'
+import FAQComponent from '@/components/FAQComponent';
 
 export default function Home() {
   const [ref, inView] = useInView();
@@ -31,8 +32,34 @@ export default function Home() {
     );
   };
   
-  
  
+  const Qn = () => {
+    return (
+      <Container fluid className={`bg-light p-5 ${styles.quienesSomosContainer}`}>
+        <Row className="justify-content-center align-items-center">
+          <Col md={6} className="text-center">
+            <h2 className={`font-weight-bold mb-4 ${styles.financialFont}`}>¡Descubre Ikapitol: Inversiones en Oro y Otros Activos!</h2>
+            <p className="text-dark">
+              En Ikapitol, nos especializamos en inversiones estratégicas en oro y otros commodities. Nuestro equipo está formado por profesionales altamente calificados, incluyendo matemáticos, físicos y expertos financieros. 
+              Contamos con grupos de personas dedicadas a analizar y maximizar rendimientos, asegurando un crecimiento constante de tus inversiones.
+            </p>
+            <p className="text-dark">
+              Descubre el potencial de multiplicar tu dinero con Ikapitol, donde la innovación y la experiencia se unen para ofrecerte rendimientos mensuales automáticos del 5-7%. 🚀 ¡Envía un mensaje y comienza hoy! 📲
+            </p>
+          </Col>
+          <Col md={6} className="text-center">
+            <Image
+              src="/backimg1.jpg"
+              alt="Imagen Ilustrativa"
+              className="img-fluid"
+              width={500}
+              height={500}
+            />
+          </Col>
+        </Row>
+      </Container>
+    );
+  };
   
   
   
@@ -135,8 +162,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ikapitol Queretaro</title>
-        <meta name="description" content="Ikapitol Queretaro" />
+        <title>Unique Living</title>
+        <meta name="description" content="Unique Living Queretaro" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -152,50 +179,36 @@ export default function Home() {
     <section >
     <div ></div>
     <Container fluid className={styles.bgImageFirst}>
-      <div id='start' className='d-flex justify-content-between align-items-center'>
-
-        <div className='text-white p-5'>
-        <h1 className={`text-right font-weight-bold ${styles.financialFont}`}>
-            Estrategias Económicas para <br /> Impulsar tu Empresa
-          </h1>
-          <div className='text-right'>
-            <Button size="lg" variant="success" onClick={() => setopenmodal(true)}>
-              ENVIAR WHATSAPP
-            </Button>
-            <p className='text-light mt-3'>*Sujeto a cambios sin previo aviso</p>
+      <Row className='p-5'>
+        <Col lg={6} className='p-5'>
+          <div className='text-white'>
+            <h1 className={`font-weight-bold ${styles.financialFont}`}>
+              Estrategias Económicas para <br /> Impulsar tu Empresa
+            </h1>
+            <div className='text-right mt-4'>
+              <Button size="lg" variant="success" onClick={() => setopenmodal(true)}>
+                ENVIAR WHATSAPP
+              </Button>
+            </div>
           </div>
-        </div>
-
-        <div className='flex-grow-1 '>
-       
-        <div style={{marginLeft:'100px'}}>
-        <iframe
-            width='400px'
-            height="250px"
-            src="https://www.youtube.com/embed/PDRsze1eEGs"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-          
-        </div>
-
-      </div>
+        </Col>
+        
+      </Row>
     </Container>
+    
+    <br/>
+    <Qn/>
     <Container>
       <div  ref={ref}>
       <Fade in={open}>
 <div className='text-center h2 m-5 p-5'>
-Descubre Soluciones Financieras Innovadoras para Potenciar tu Negocio
+Comienza tu inversión hoy mismo.<br/>  <br/> ¡Elige tu Plan de Inversión Ahora!
 </div>
 
 </Fade>
       </div>
    
     </Container>
-    <br/>
     <Container fluid className='m-2'>
     <Planes/>
    </Container>
