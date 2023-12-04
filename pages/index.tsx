@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useInView } from 'react-intersection-observer';
 import Fade from 'react-bootstrap/Fade';
-import {Button, Container,Modal, ModalProps,Navbar,Form,Row,Col} from 'react-bootstrap'
+import {Button, Container,Modal, ModalProps,Navbar,Form,Row,Col, Card} from 'react-bootstrap'
 import { animateScroll as scroll } from 'react-scroll';
 import { Omit, BsPrefixProps } from 'react-bootstrap/esm/helpers';
 import axios from 'axios'
@@ -31,8 +31,91 @@ export default function Home() {
       </footer>
     );
   };
-  
  
+
+  const RetornoInversionComponent = () => {
+    // Variables para simular el rango de retorno mensual
+    const retornoMinimo = 5; // Rendimiento mínimo del 5%
+    const retornoMaximo = 7; // Rendimiento máximo del 7%
+  
+    // Estado para manejar el valor del input
+    const [inversionInput, setInversionInput] = useState(1000);
+  
+    // Cálculos para el retorno de inversión
+    const retornoMinimoDolar = inversionInput * (retornoMinimo / 100);
+    const retornoMaximoDolar = inversionInput * (retornoMaximo / 100);
+    const retornoAnualMinimo = retornoMinimoDolar * 18;
+    const retornoAnualMaximo = retornoMaximoDolar * 18;
+  
+    return (
+      <Container className="py-5">
+        <Row className="justify-content-center align-items-center">
+          <Col md={6} className="text-center">
+            <h2 className="font-weight-bold mb-4">Calcula tu Retorno de Inversión</h2>
+            <Form>
+              <Form.Group controlId="inversionInput">
+                <Form.Label>Ingresa el monto de inversión:</Form.Label>
+                <Form.Control
+                  type="number"
+                  value={inversionInput}
+                  onChange={(e) => setInversionInput(e.target.value)}
+                />
+              </Form.Group>
+            </Form>
+            <p className="text-dark">
+              Si inviertes ${inversionInput} y obtienes un retorno mensual del 5 al 7%, tu retorno estimado sería:
+            </p>
+            <Card className="text-center">
+              <Card.Body>
+                <p className="font-weight-bold">Retorno Estimado:</p>
+                <p>Entre ${retornoAnualMinimo.toFixed(2)} y ${retornoAnualMaximo.toFixed(2)} </p>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    );
+  };
+
+
+  const ComoComprarComponent = () => {
+    return (
+      <Container className="py-5 bg-primary">
+        <Row className="justify-content-center align-items-center">
+        <Col md={6} className="text-center">
+            {/* Inserta aquí tu componente de video o el código para mostrar el video */}
+            {/* Puedes usar un reproductor de video de YouTube, Vimeo, u otra plataforma */}
+            <iframe
+            width="100%"
+            height="400px"
+            src="https://www.youtube.com/embed/v3l72fu4Wn0"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          </Col>
+          <Col md={6} className="text-center">
+            <h2 className="font-weight-bold mb-4 text-white">Para Empezar a Invertir, Adquiere Oro Digital con Ikapitol</h2>
+            <p className="text-white">
+              Aprende a comprar criptomonedas y maximiza tus inversiones con Ikapitol. Sigue estos sencillos pasos para empezar hoy mismo:
+            </p>
+            <ol className="text-left ">
+              <li>Abre una cuenta en una plataforma de intercambio de criptomonedas, como Bitso o Binance.</li>
+              <li>Verifica tu identidad de acuerdo con las regulaciones de la plataforma.</li>
+              <li>Deposita fondos en tu cuenta utilizando métodos de pago disponibles.</li>
+              <li>Selecciona la criptomoneda que deseas comprar (por ejemplo, Bitcoin, DolarTether, etc.).</li>
+              <li>Realiza la compra de la criptomoneda y Deposita tu primera inversión a Ikapitol.</li>
+            </ol>
+           
+         
+          </Col>
+         
+        </Row>
+      </Container>
+     
+    );
+  };
   const Qn = () => {
     return (
       <Container fluid className={`bg-light p-5 ${styles.quienesSomosContainer}`}>
@@ -49,7 +132,7 @@ export default function Home() {
           </Col>
           <Col md={6} className="text-center">
             <Image
-              src="/backimg1.jpg"
+              src="/img2.jpg"
               alt="Imagen Ilustrativa"
               className="img-fluid"
               width={500}
@@ -192,7 +275,17 @@ export default function Home() {
             </div>
           </div>
         </Col>
-        
+        <Col>
+        <iframe
+            width="100%"
+            height="400px"
+            src="https://www.youtube.com/embed/TU_ID_DE_VIDEO"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </Col>
       </Row>
     </Container>
     
@@ -200,20 +293,31 @@ export default function Home() {
     <Qn/>
     <Container>
       <div  ref={ref}>
-      <Fade in={open}>
+      
+      </div>
+   
+    </Container>
+    <div className='bg-primary'>
+<ComoComprarComponent/>
+</div>
+<Fade in={open}>
 <div className='text-center h2 m-5 p-5'>
 Comienza tu inversión hoy mismo.<br/>  <br/> ¡Elige tu Plan de Inversión Ahora!
 </div>
 
 </Fade>
-      </div>
-   
-    </Container>
     <Container fluid className='m-2'>
     <Planes/>
-   </Container>
 
+    
+   </Container>
+<Container>
+
+  <RetornoInversionComponent/>
+</Container>
   </section>
+  <br/>
+  <br/>
   <Footer/>
   <MD
       show={openmodal}
