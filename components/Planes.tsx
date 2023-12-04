@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { id, title, image,  } = project;
 
   return (
-  <Link href={'/proyectos'}>
+  <Link href={'https://investment.ikapitol.com/Enrollment?culture=es&referer=Wm1GaWFXOXNZV2R2YldWNk1RPT18fnxUR1ZtZEE9PQ=='}>
       <StyledCard>
         <Card.Img variant="top" src={image} alt={title}  style={{ height: '195px', objectFit: 'cover' }} />
         <Card.Body>
