@@ -58,7 +58,7 @@ export default function Home() {
                 <Form.Control
                   type="number"
                   value={inversionInput}
-                  onChange={(e) => setInversionInput(e.target.value)}
+                  onChange={(e) => setInversionInput(parseFloat(e.target.value))}
                 />
               </Form.Group>
             </Form>
