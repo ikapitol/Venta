@@ -9,6 +9,7 @@ import {Button, Container,Modal, ModalProps,Navbar,Form,Row,Col, Card} from 'rea
 import { animateScroll as scroll } from 'react-scroll';
 import { Omit, BsPrefixProps } from 'react-bootstrap/esm/helpers';
 import axios from 'axios'
+import Link from 'next/link'
 import Planes from '@/components/Planes'
 
 
