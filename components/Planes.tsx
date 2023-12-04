@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
   <Link href={'/proyectos'}>
       <StyledCard>
-        <Card.Img variant="top" src={image} alt={title}  style={{ height: '200px', objectFit: 'cover' }} />
+        <Card.Img variant="top" src={image} alt={title}  style={{ height: '195px', objectFit: 'cover' }} />
         <Card.Body>
           <Card.Title style={{fontFamily:'Raleway'}}>{title}</Card.Title>
         
