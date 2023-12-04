@@ -246,8 +246,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Unique Living</title>
-        <meta name="description" content="Unique Living Queretaro" />
+        <title>ikapitol Queretaro</title>
+        <meta name="description" content="ikapitol Queretaro" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -282,7 +282,7 @@ export default function Home() {
         <iframe
             width="100%"
             height="400px"
-            src="https://www.youtube.com/embed/TU_ID_DE_VIDEO"
+            src="/videoinf.mp4"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
