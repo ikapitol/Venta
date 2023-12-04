@@ -46,37 +46,37 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 const projects = [
   {
     id: 1,
-    title: 'Casa Querétaro, QRO',
+    title: 'Plan $100USD',
     image: '/plan100usd.png',
    
   },
   {
     id: 2,
-    title: 'Proyecto OMEKUA',
+    title: 'Plan $250USD',
     image: '/plan250usd.png',
   
   },
   {
     id: 3,
-    title: 'Ampliación Juriquilla, Qro',
+    title: 'Plan $500USD',
     image: '/plan500usd.png',
   
   },
   {
     id: 4,
-    title: 'Casa Querétaro, QRO',
+    title: 'Plan $1000USD',
     image: '/plan1000usd.png',
    
   },
   {
     id: 5,
-    title: 'Proyecto OMEKUA',
+    title: 'Plan $2500USD',
     image: '/plan2500usd.png',
   
   },
   {
     id: 6,
-    title: 'Ampliación Juriquilla, Qro',
+    title: 'Plan $5000USD',
     image: '/plan5000usd.png',
   
   }
